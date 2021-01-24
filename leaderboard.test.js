@@ -21,4 +21,14 @@ describe('getLeaderboardPositions()', () => {
 
         expect(actual).toEqual(expected);
     });
+
+    test('test case #3', () => {
+        const expected = [4, 3, 1];
+
+        const leaderboard = [100, 90, 90, 80];
+        const playerScores = [70, 80, 105];
+        const actual = getLeaderboardPositions(leaderboard, playerScores);
+
+        expect(actual).toEqual(expected);
+    });
 })
